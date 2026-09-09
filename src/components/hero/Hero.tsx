@@ -11,7 +11,7 @@ export default function Hero() {
     return (
         <Section
             id="hero"
-            className="pt-36 pb-24"
+            className="pt-28 pb-16 sm:pt-36 sm:pb-24"
         >
             <HeroBackground />
 

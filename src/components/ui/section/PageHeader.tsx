@@ -44,7 +44,7 @@ export default function PageHeader({
     return (
         <section
             className={cn(
-                "relative overflow-hidden pt-36 pb-20",
+                "relative overflow-hidden pt-28 pb-12 sm:pt-36 sm:pb-20",
                 className
             )}
         >
@@ -92,14 +92,14 @@ export default function PageHeader({
 
                     {/* Title */}
 
-                    <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                    <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
                         {title}
                     </h1>
 
                     {/* Description */}
 
                     {description && (
-                        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-400">
+                        <p className="mx-auto mt-4 sm:mt-6 max-w-2xl text-base sm:text-lg leading-7 sm:leading-8 text-slate-400">
                             {description}
                         </p>
                     )}

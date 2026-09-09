@@ -18,7 +18,7 @@ export default function CTASection() {
             viewport={{
                 once: true,
             }}
-            className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/5 px-8 py-20 backdrop-blur-3xl md:px-16"
+            className="relative overflow-hidden rounded-2xl sm:rounded-[40px] border border-white/10 bg-white/5 px-5 py-12 sm:px-8 sm:py-20 backdrop-blur-3xl md:px-16"
         >
             {/* Background */}
 
@@ -34,19 +34,19 @@ export default function CTASection() {
                     Ready to Get Started?
                 </span>
 
-                <h2 className="mt-8 text-4xl font-bold text-white md:text-6xl">
+                <h2 className="mt-6 sm:mt-8 text-2xl sm:text-4xl font-bold text-white md:text-6xl">
                     Let's Build Something
                     <br />
                     Extraordinary Together
                 </h2>
 
-                <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-slate-300">
+                <p className="mx-auto mt-5 sm:mt-8 max-w-2xl text-base sm:text-lg leading-7 sm:leading-8 text-slate-300">
                     Whether you're launching a new business,
                     redesigning your website, or integrating AI,
                     we're ready to help you build your next digital experience.
                 </p>
 
-                <div className="mt-12 flex flex-col justify-center gap-5 sm:flex-row">
+                <div className="mt-8 sm:mt-12 flex flex-col justify-center gap-4 sm:gap-5 sm:flex-row">
 
                     <Link href="/contact">
 

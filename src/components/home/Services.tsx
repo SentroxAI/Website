@@ -81,7 +81,7 @@ export default function Services() {
                         badge="Our Services"
                         title="AI Solutions Designed for Modern Businesses"
                         description="From AI-powered websites to automation and digital growth, Sentrox builds solutions that help businesses scale faster."
-                        className="mb-16"
+                        className="mb-10 sm:mb-16"
                     />
                 </motion.div>
 
@@ -93,12 +93,12 @@ export default function Services() {
                         whileTap={hoverCard.whileTap}
                         className="lg:col-span-2"
                     >
-                        <GlassCard className="group h-full p-8">
+                        <GlassCard className="group h-full p-5 sm:p-8">
                             <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/15">
                                 <Globe className="h-8 w-8 text-blue-400" />
                             </div>
 
-                            <h3 className="mt-8 text-3xl font-bold text-white">
+                            <h3 className="mt-5 sm:mt-8 text-2xl sm:text-3xl font-bold text-white">
                                 AI Website Development
                             </h3>
 
@@ -108,7 +108,7 @@ export default function Services() {
                                 to convert visitors into customers.
                             </p>
 
-                            <div className="mt-8 flex flex-wrap gap-3">
+                            <div className="mt-5 sm:mt-8 flex flex-wrap gap-2 sm:gap-3">
                                 {["Next.js", "SEO", "AI", "Responsive", "Fast"].map((item) => (
                                     <span
                                         key={item}

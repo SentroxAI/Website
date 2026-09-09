@@ -38,7 +38,7 @@ export default function Footer() {
 
             <div className="absolute left-1/2 top-0 -z-10 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[160px]" />
 
-            <Container className="py-28">
+            <Container className="py-16 sm:py-28">
 
                 {/* CTA */}
 
@@ -51,14 +51,14 @@ export default function Footer() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={viewport}
-                    className="mt-24"
+                    className="mt-14 sm:mt-24"
                 >
                     <Newsletter />
                 </motion.div>
 
                 {/* Footer Content */}
 
-                <div className="mt-24 grid gap-14 lg:grid-cols-6">
+                <div className="mt-14 sm:mt-24 grid gap-10 sm:gap-14 lg:grid-cols-6">
 
                     {/* Contact */}
 
@@ -69,7 +69,7 @@ export default function Footer() {
                         viewport={viewport}
                         className="lg:col-span-2"
                     >
-                        <GlassCard className="h-full p-8">
+                        <GlassCard className="h-full p-5 sm:p-8">
 
                             {/* Logo */}
 
@@ -175,7 +175,7 @@ export default function Footer() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={viewport}
-                    className="mt-24 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-10 text-center md:flex-row"
+                    className="mt-14 sm:mt-24 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 sm:pt-10 text-center md:flex-row"
                 >
 
                     <p className="text-sm text-slate-500">

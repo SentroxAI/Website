@@ -46,7 +46,7 @@ export default function SectionHeading({
     return (
         <div
             className={cn(
-                "mb-16 flex flex-col gap-6",
+                "mb-10 sm:mb-16 flex flex-col gap-4 sm:gap-6",
                 align === "center"
                     ? "items-center text-center"
                     : "items-start text-left",
@@ -64,7 +64,7 @@ export default function SectionHeading({
 
             <h2
                 className={cn(
-                    "text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl",
+                    "text-2xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl",
                     maxWidths[maxWidth]
                 )}
             >
@@ -74,7 +74,7 @@ export default function SectionHeading({
             {description && (
                 <p
                     className={cn(
-                        "text-lg leading-8 text-slate-400",
+                        "text-base sm:text-lg leading-7 sm:leading-8 text-slate-400",
                         maxWidths[maxWidth]
                     )}
                 >

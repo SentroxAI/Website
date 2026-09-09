@@ -48,7 +48,7 @@ export default function PricingCard({
                 <div className="absolute -top-32 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-blue-500/20 blur-3xl" />
             )}
 
-            <div className="relative p-8">
+            <div className="relative p-5 sm:p-8">
                 <h3 className="text-2xl font-bold text-white">
                     {plan.name}
                 </h3>
@@ -69,7 +69,7 @@ export default function PricingCard({
                     }}
                     className="mt-8"
                 >
-                    <span className="text-5xl font-black tracking-tight text-white">
+                    <span className="text-4xl sm:text-5xl font-black tracking-tight text-white">
                         {price}
                     </span>
 

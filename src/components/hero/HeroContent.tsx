@@ -15,7 +15,7 @@ export default function HeroContent() {
             </GradientBadge>
 
             <div className="space-y-4">
-                <h1 className="max-w-2xl text-5xl font-bold leading-tight tracking-tight md:text-7xl">
+                <h1 className="max-w-2xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-7xl">
                     Build{" "}
                     <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                         AI-Powered

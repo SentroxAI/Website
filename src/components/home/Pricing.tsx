@@ -107,7 +107,7 @@ export default function Pricing() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={viewport}
-                    className="mt-20 grid gap-8 lg:grid-cols-3"
+                    className="mt-12 sm:mt-20 grid gap-8 lg:grid-cols-3"
                 >
                     {pricingPlans.map((plan) => (
                         <PricingCard
@@ -126,7 +126,7 @@ export default function Pricing() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={viewport}
-                    className="mt-20 grid gap-6 md:grid-cols-3"
+                    className="mt-12 sm:mt-20 grid gap-6 md:grid-cols-3"
                 >
                     {trustItems.map((item) => {
                         const Icon = item.icon;
@@ -137,10 +137,10 @@ export default function Pricing() {
                                 whileHover={hoverCard.whileHover}
                                 whileTap={hoverCard.whileTap}
                             >
-                                <GlassCard className="h-full p-8">
+                                <GlassCard className="group h-full p-5 sm:p-8">
                                     <Icon className="mb-5 h-10 w-10 text-blue-400" />
 
-                                    <h3 className="text-xl font-semibold text-white">
+                                    <h3 className="mt-6 sm:mt-8 text-2xl sm:text-3xl font-bold text-white">
                                         {item.title}
                                     </h3>
 
@@ -162,11 +162,11 @@ export default function Pricing() {
                     viewport={viewport}
                     className="mt-24"
                 >
-                    <GlassCard className="relative overflow-hidden bg-gradient-to-br from-blue-600/20 to-slate-900/50 p-12 text-center">
+                    <GlassCard className="relative overflow-hidden bg-gradient-to-br from-blue-600/20 to-slate-900/50 p-6 sm:p-10 lg:p-12 text-center">
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.25),transparent_70%)]" />
 
                         <div className="relative">
-                            <h2 className="mx-auto max-w-3xl text-4xl font-bold text-white md:text-5xl">
+                            <h2 className="mx-auto max-w-3xl text-2xl sm:text-4xl font-bold text-white md:text-5xl">
                                 Not Sure Which Plan Fits?
                             </h2>
 
