@@ -155,17 +155,17 @@ function RadioSection({
     fmt: (amountINR: number) => string;
 }) {
     return (
-        <GlassCard hover={false} glow className="p-6 lg:p-8">
-            <div className="flex items-baseline gap-4">
-                <span className="font-display text-lg font-bold text-cyan-400">
+        <GlassCard hover={false} glow className="p-4 sm:p-6 lg:p-8">
+            <div className="flex items-baseline gap-3 sm:gap-4">
+                <span className="font-display text-base sm:text-lg font-bold text-cyan-400">
                     {stepNo}
                 </span>
-                <h3 className="font-display text-xl font-bold tracking-tight text-white lg:text-2xl">
+                <h3 className="font-display text-lg sm:text-xl font-bold tracking-tight text-white lg:text-2xl">
                     {title}
                 </h3>
             </div>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div className="mt-4 sm:mt-6 grid gap-3 sm:grid-cols-2">
                 {items.map((it) => {
                     const active = selectedId === it.id;
                     const priceLabel =
@@ -178,7 +178,7 @@ function RadioSection({
                             key={it.id}
                             onClick={() => onSelect(it.id)}
                             className={cn(
-                                "relative flex flex-col rounded-2xl border p-5 text-left transition-all duration-200",
+                                "relative flex flex-col rounded-2xl border p-4 sm:p-5 text-left transition-all duration-200",
                                 active
                                     ? "border-cyan-400/60 bg-cyan-400/[0.07]"
                                     : "border-white/10 bg-white/[0.02] hover:border-white/25"
@@ -262,17 +262,17 @@ function AddonSection({
     const categories = groupByCategory(items);
 
     return (
-        <GlassCard hover={false} glow className="p-6 lg:p-8">
-            <div className="flex items-baseline gap-4">
-                <span className="font-display text-lg font-bold text-cyan-400">
+        <GlassCard hover={false} glow className="p-4 sm:p-6 lg:p-8">
+            <div className="flex items-baseline gap-3 sm:gap-4">
+                <span className="font-display text-base sm:text-lg font-bold text-cyan-400">
                     {stepNo}
                 </span>
-                <h3 className="font-display text-xl font-bold tracking-tight text-white lg:text-2xl">
+                <h3 className="font-display text-lg sm:text-xl font-bold tracking-tight text-white lg:text-2xl">
                     {title}
                 </h3>
             </div>
 
-            <div className="mt-6 space-y-6">
+            <div className="mt-4 sm:mt-6 space-y-6">
                 {categories.map(([cat, catItems]) => (
                     <div key={cat}>
                         {cat && (
@@ -405,12 +405,12 @@ function RetainerSection({
     if (!RETAINER_ITEM) return null;
 
     return (
-        <GlassCard hover={false} glow className="p-6 lg:p-8">
-            <div className="flex items-baseline gap-4">
-                <span className="font-display text-lg font-bold text-cyan-400">
+        <GlassCard hover={false} glow className="p-4 sm:p-6 lg:p-8">
+            <div className="flex items-baseline gap-3 sm:gap-4">
+                <span className="font-display text-base sm:text-lg font-bold text-cyan-400">
                     {stepNo}
                 </span>
-                <h3 className="font-display text-xl font-bold tracking-tight text-white lg:text-2xl">
+                <h3 className="font-display text-lg sm:text-xl font-bold tracking-tight text-white lg:text-2xl">
                     {title}
                 </h3>
             </div>
@@ -908,12 +908,12 @@ export default function QuoteCalculator() {
 
                         {/* Step 5 — Contact Form */}
                         <div ref={formRef}>
-                            <GlassCard hover={false} glow className="p-6 lg:p-8">
-                                <div className="flex items-baseline gap-4">
-                                    <span className="font-display text-lg font-bold text-cyan-400">
+                            <GlassCard hover={false} glow className="p-4 sm:p-6 lg:p-8">
+                                <div className="flex items-baseline gap-3 sm:gap-4">
+                                    <span className="font-display text-base sm:text-lg font-bold text-cyan-400">
                                         {String(stepCounter + 1).padStart(2, "0")}
                                     </span>
-                                    <h3 className="font-display text-xl font-bold tracking-tight text-white lg:text-2xl">
+                                    <h3 className="font-display text-lg sm:text-xl font-bold tracking-tight text-white lg:text-2xl">
                                         Get your quote
                                     </h3>
                                 </div>
