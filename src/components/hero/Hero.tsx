@@ -1,19 +1,27 @@
 "use client";
 
+import Section from "@/components/ui/layout/Section";
+import Container from "@/components/ui/layout/Container";
+
 import HeroBackground from "./HeroBackground";
 import HeroContent from "./HeroContent";
 import HeroPreview from "./HeroPreview";
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden pt-36 pb-24">
+        <Section
+            id="hero"
+            className="pt-36 pb-24"
+        >
             <HeroBackground />
 
-            <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
-                <HeroContent />
+            <Container>
+                <div className="relative grid items-center gap-16 lg:grid-cols-2">
+                    <HeroContent />
 
-                <HeroPreview />
-            </div>
-        </section>
+                    <HeroPreview />
+                </div>
+            </Container>
+        </Section>
     );
 }

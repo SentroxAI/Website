@@ -10,6 +10,7 @@ export const pricingPlans: PricingPlan[] = [
             "Perfect for startups and local businesses looking for a premium online presence.",
 
         buttonText: "Get Started",
+        href: "/signup?redirect=/dashboard/billing",
 
         prices: {
             INR: {
@@ -49,6 +50,7 @@ export const pricingPlans: PricingPlan[] = [
             "Best for growing businesses that need AI automation and lead generation.",
 
         buttonText: "Most Popular",
+        href: "/signup?redirect=/dashboard/billing",
 
         popular: true,
 
@@ -92,6 +94,7 @@ export const pricingPlans: PricingPlan[] = [
             "Tailored enterprise solution with unlimited scalability and dedicated support.",
 
         buttonText: "Contact Sales",
+        href: "/contact?subject=Enterprise+Plan+Inquiry",
 
         prices: {
             INR: {

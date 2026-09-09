@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+
 
 import {
     Sheet,
@@ -14,17 +14,18 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 
-import ThemeToggle from "./ThemeToggle";
+
 import { navigation } from "./data";
 
 export default function MobileNav() {
     return (
         <Sheet>
-            <SheetTrigger>
-                <Button
-                    variant="ghost"
-                    size="icon"
-                    className="
+            <SheetTrigger
+                render={
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        className="
     lg:hidden
     rounded-xl
     border
@@ -33,9 +34,10 @@ export default function MobileNav() {
     backdrop-blur-xl
     hover:bg-white/10
   "
-                >
-                    <Menu className="size-5" />
-                </Button>
+                    />
+                }
+            >
+                <Menu className="size-5" />
             </SheetTrigger>
 
             <SheetContent
@@ -58,15 +60,6 @@ export default function MobileNav() {
                     ))}
                 </nav>
 
-                <Separator className="my-8" />
-
-                <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium">
-                        Theme
-                    </span>
-
-                    <ThemeToggle />
-                </div>
 
                 <Link
                     href="/contact"

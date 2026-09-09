@@ -11,6 +11,14 @@ import {
     Wrench,
 } from "lucide-react";
 
+import Container from "@/components/ui/layout/Container";
+import Section from "@/components/ui/layout/Section";
+import SectionHeading from "@/components/ui/section/SectionHeading";
+import GlassCard from "@/components/ui/cards/GlassCard";
+import PrimaryButton from "@/components/ui/buttons/PrimaryButton";
+
+import { fadeUp, hoverCard, viewport } from "@/lib/animations";
+
 const services = [
     {
         title: "AI Website Development",
@@ -56,68 +64,69 @@ const services = [
         icon: Wrench,
     },
 ];
-
+const featuredService = services.find((service) => service.featured);
+const regularServices = services.filter((service) => !service.featured);
 export default function Services() {
     return (
-        <section className="relative py-28">
-            <div className="mx-auto max-w-7xl px-6">
+        <Section id="services">
+            <Container>
                 {/* Header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 35 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mx-auto mb-16 max-w-3xl text-center"
+                    variants={fadeUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={viewport}
                 >
-                    <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-5 py-2 text-sm text-blue-400">
-                        Our Services
-                    </span>
-
-                    <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
-                        AI Solutions Designed for Modern Businesses
-                    </h2>
-
-                    <p className="mt-6 text-lg text-slate-400">
-                        From AI-powered websites to automation and digital growth,
-                        Sentrox builds solutions that help businesses scale faster.
-                    </p>
+                    <SectionHeading
+                        badge="Our Services"
+                        title="AI Solutions Designed for Modern Businesses"
+                        description="From AI-powered websites to automation and digital growth, Sentrox builds solutions that help businesses scale faster."
+                        className="mb-16"
+                    />
                 </motion.div>
 
                 {/* Grid */}
                 <div className="grid gap-6 lg:grid-cols-3">
                     {/* Featured Card */}
                     <motion.div
-                        whileHover={{ y: -8 }}
-                        className="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl lg:col-span-2"
+                        whileHover={hoverCard.whileHover}
+                        whileTap={hoverCard.whileTap}
+                        className="lg:col-span-2"
                     >
-                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/15">
-                            <Globe className="h-8 w-8 text-blue-400" />
-                        </div>
+                        <GlassCard className="group h-full p-8">
+                            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/15">
+                                <Globe className="h-8 w-8 text-blue-400" />
+                            </div>
 
-                        <h3 className="mt-8 text-3xl font-bold text-white">
-                            AI Website Development
-                        </h3>
+                            <h3 className="mt-8 text-3xl font-bold text-white">
+                                AI Website Development
+                            </h3>
 
-                        <p className="mt-4 max-w-xl text-slate-400">
-                            Premium websites that combine beautiful design, AI-powered
-                            experiences, fast performance and SEO to convert visitors
-                            into customers.
-                        </p>
+                            <p className="mt-4 max-w-xl text-slate-400">
+                                Premium websites that combine beautiful design,
+                                AI-powered experiences, fast performance and SEO
+                                to convert visitors into customers.
+                            </p>
 
-                        <div className="mt-8 flex flex-wrap gap-3">
-                            {["Next.js", "SEO", "AI", "Responsive", "Fast"].map((item) => (
-                                <span
-                                    key={item}
-                                    className="rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-300"
-                                >
-                                    {item}
-                                </span>
-                            ))}
-                        </div>
+                            <div className="mt-8 flex flex-wrap gap-3">
+                                {["Next.js", "SEO", "AI", "Responsive", "Fast"].map((item) => (
+                                    <span
+                                        key={item}
+                                        className="rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300"
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
 
-                        <button className="mt-10 flex items-center gap-2 text-blue-400 transition group-hover:gap-3">
-                            Learn More
-                            <ArrowRight size={18} />
-                        </button>
+                            <PrimaryButton
+                                href="/services"
+                                className="mt-10"
+                                rightIcon={<ArrowRight size={18} />}
+                            >
+                                Learn More
+                            </PrimaryButton>
+                        </GlassCard>
                     </motion.div>
 
                     {/* Side Cards */}
@@ -128,22 +137,25 @@ export default function Services() {
                             return (
                                 <motion.div
                                     key={service.title}
-                                    initial={{ opacity: 0, y: 25 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    variants={fadeUp}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={viewport}
                                     transition={{ delay: index * 0.1 }}
-                                    viewport={{ once: true }}
-                                    whileHover={{ y: -6 }}
-                                    className="group rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
+                                    whileHover={hoverCard.whileHover}
+                                    whileTap={hoverCard.whileTap}
                                 >
-                                    <Icon className="mb-4 h-8 w-8 text-cyan-400" />
+                                    <GlassCard className="group h-full p-6">
+                                        <Icon className="mb-4 h-8 w-8 text-cyan-400" />
 
-                                    <h3 className="text-xl font-semibold text-white">
-                                        {service.title}
-                                    </h3>
+                                        <h3 className="text-xl font-semibold text-white">
+                                            {service.title}
+                                        </h3>
 
-                                    <p className="mt-3 text-sm text-slate-400">
-                                        {service.description}
-                                    </p>
+                                        <p className="mt-3 text-sm text-slate-400">
+                                            {service.description}
+                                        </p>
+                                    </GlassCard>
                                 </motion.div>
                             );
                         })}
@@ -158,27 +170,30 @@ export default function Services() {
                         return (
                             <motion.div
                                 key={service.title}
-                                initial={{ opacity: 0, y: 25 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={viewport}
                                 transition={{ delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                whileHover={{ scale: 1.03 }}
-                                className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
+                                whileHover={hoverCard.whileHover}
+                                whileTap={hoverCard.whileTap}
                             >
-                                <Icon className="mb-4 h-8 w-8 text-blue-400" />
+                                <GlassCard className="h-full p-6">
+                                    <Icon className="mb-4 h-8 w-8 text-blue-400" />
 
-                                <h3 className="text-xl font-semibold text-white">
-                                    {service.title}
-                                </h3>
+                                    <h3 className="text-xl font-semibold text-white">
+                                        {service.title}
+                                    </h3>
 
-                                <p className="mt-3 text-sm text-slate-400">
-                                    {service.description}
-                                </p>
+                                    <p className="mt-3 text-sm text-slate-400">
+                                        {service.description}
+                                    </p>
+                                </GlassCard>
                             </motion.div>
                         );
                     })}
                 </div>
-            </div>
-        </section>
+            </Container>
+        </Section>
     );
 }

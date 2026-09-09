@@ -80,7 +80,8 @@ export default function PricingCard({
                     )}
                 </motion.div>
 
-                <motion.button
+                <motion.a
+                    href={plan.href || "/contact"}
                     whileHover={{
                         scale: 1.02,
                     }}
@@ -95,7 +96,7 @@ export default function PricingCard({
                     {plan.buttonText}
 
                     <ArrowRight size={18} />
-                </motion.button>
+                </motion.a>
 
                 <div className="my-8 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 

@@ -1,21 +1,22 @@
-import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
+import PrimaryButton from "@/components/ui/buttons/PrimaryButton";
+import SecondaryButton from "@/components/ui/buttons/SecondaryButton";
 
 export default function HeroActions() {
     return (
-        <div className="flex flex-wrap gap-4">
-            <Link href="/contact">
-                <Button size="lg">
-                    Start Your Project
-                </Button>
-            </Link>
+        <div className="flex flex-wrap items-center gap-4">
+            <PrimaryButton
+                href="/contact"
+                size="lg"
+            >
+                Start Your Project
+            </PrimaryButton>
 
-            <Link href="/portfolio">
-                <Button variant="outline" size="lg">
-                    View Portfolio
-                </Button>
-            </Link>
+            <SecondaryButton
+                href="/portfolio"
+                size="lg"
+            >
+                View Portfolio
+            </SecondaryButton>
         </div>
     );
 }

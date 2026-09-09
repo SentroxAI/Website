@@ -4,7 +4,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* -------------------------------------------------------------------------- */
+/*                     SENTROX THEME TOKENS (CSS Bridge)                      */
+/*                                                                            */
+/*  Maps all JS tokens from src/lib/theme/* into CSS custom properties so     */
+/*  Tailwind v4 utilities like bg-sx-surface, text-sx-muted, etc. work.       */
+/*  Future theming (light mode, brand skins) only requires changing :root.    */
+/* -------------------------------------------------------------------------- */
+
 @theme inline {
+  /* ── Shadcn defaults ──────────────────────────────────────────────────── */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
@@ -46,9 +55,80 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* ── Sentrox Brand Colors ─────────────────────────────────────────────── */
+  --color-sx-bg: var(--sx-bg);
+  --color-sx-surface: var(--sx-surface);
+  --color-sx-surface-light: var(--sx-surface-light);
+
+  --color-sx-primary-50: var(--sx-primary-50);
+  --color-sx-primary-100: var(--sx-primary-100);
+  --color-sx-primary-200: var(--sx-primary-200);
+  --color-sx-primary-300: var(--sx-primary-300);
+  --color-sx-primary-400: var(--sx-primary-400);
+  --color-sx-primary-500: var(--sx-primary-500);
+  --color-sx-primary-600: var(--sx-primary-600);
+  --color-sx-primary-700: var(--sx-primary-700);
+  --color-sx-primary-800: var(--sx-primary-800);
+  --color-sx-primary-900: var(--sx-primary-900);
+  --color-sx-primary: var(--sx-primary);
+
+  --color-sx-accent-50: var(--sx-accent-50);
+  --color-sx-accent-100: var(--sx-accent-100);
+  --color-sx-accent-200: var(--sx-accent-200);
+  --color-sx-accent-300: var(--sx-accent-300);
+  --color-sx-accent-400: var(--sx-accent-400);
+  --color-sx-accent-500: var(--sx-accent-500);
+  --color-sx-accent-600: var(--sx-accent-600);
+  --color-sx-accent-700: var(--sx-accent-700);
+  --color-sx-accent-800: var(--sx-accent-800);
+  --color-sx-accent-900: var(--sx-accent-900);
+  --color-sx-accent: var(--sx-accent);
+
+  --color-sx-text: var(--sx-text);
+  --color-sx-text-secondary: var(--sx-text-secondary);
+  --color-sx-text-muted: var(--sx-text-muted);
+  --color-sx-text-subtle: var(--sx-text-subtle);
+  --color-sx-text-disabled: var(--sx-text-disabled);
+
+  --color-sx-border: var(--sx-border);
+  --color-sx-border-hover: var(--sx-border-hover);
+  --color-sx-border-focus: var(--sx-border-focus);
+
+  --color-sx-glass-light: var(--sx-glass-light);
+  --color-sx-glass-medium: var(--sx-glass-medium);
+  --color-sx-glass-heavy: var(--sx-glass-heavy);
+
+  --color-sx-success: var(--sx-success);
+  --color-sx-success-bg: var(--sx-success-bg);
+  --color-sx-warning: var(--sx-warning);
+  --color-sx-warning-bg: var(--sx-warning-bg);
+  --color-sx-danger: var(--sx-danger);
+  --color-sx-danger-bg: var(--sx-danger-bg);
+  --color-sx-info: var(--sx-info);
+  --color-sx-info-bg: var(--sx-info-bg);
+
+  /* ── Sentrox Shadows ──────────────────────────────────────────────────── */
+  --shadow-sx-sm: var(--sx-shadow-sm);
+  --shadow-sx-md: var(--sx-shadow-md);
+  --shadow-sx-lg: var(--sx-shadow-lg);
+  --shadow-sx-xl: var(--sx-shadow-xl);
+  --shadow-sx-2xl: var(--sx-shadow-2xl);
+  --shadow-sx-glow-primary: var(--sx-glow-primary);
+  --shadow-sx-glow-accent: var(--sx-glow-accent);
+  --shadow-sx-glow-white: var(--sx-glow-white);
+  --shadow-sx-button: var(--sx-shadow-button);
+  --shadow-sx-button-hover: var(--sx-shadow-button-hover);
+  --shadow-sx-card: var(--sx-shadow-card);
+  --shadow-sx-card-hover: var(--sx-shadow-card-hover);
 }
 
+/* -------------------------------------------------------------------------- */
+/*                         :root — Token Definitions                          */
+/* -------------------------------------------------------------------------- */
+
 :root {
+  /* ── Shadcn (Light) ───────────────────────────────────────────────────── */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -81,9 +161,98 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* ── Sentrox Backgrounds ──────────────────────────────────────────────── */
+  --sx-bg: #030712;
+  --sx-surface: #0a0f1e;
+  --sx-surface-light: #111827;
+
+  /* ── Sentrox Primary (Blue) ───────────────────────────────────────────── */
+  --sx-primary-50: #eff6ff;
+  --sx-primary-100: #dbeafe;
+  --sx-primary-200: #bfdbfe;
+  --sx-primary-300: #93c5fd;
+  --sx-primary-400: #60a5fa;
+  --sx-primary-500: #3b82f6;
+  --sx-primary-600: #2563eb;
+  --sx-primary-700: #1d4ed8;
+  --sx-primary-800: #1e40af;
+  --sx-primary-900: #1e3a8a;
+  --sx-primary: #2563eb;
+
+  /* ── Sentrox Accent (Cyan) ────────────────────────────────────────────── */
+  --sx-accent-50: #ecfeff;
+  --sx-accent-100: #cffafe;
+  --sx-accent-200: #a5f3fc;
+  --sx-accent-300: #67e8f9;
+  --sx-accent-400: #22d3ee;
+  --sx-accent-500: #06b6d4;
+  --sx-accent-600: #0891b2;
+  --sx-accent-700: #0e7490;
+  --sx-accent-800: #155e75;
+  --sx-accent-900: #164e63;
+  --sx-accent: #06b6d4;
+
+  /* ── Sentrox Text ─────────────────────────────────────────────────────── */
+  --sx-text: #ffffff;
+  --sx-text-secondary: #e2e8f0;
+  --sx-text-muted: #94a3b8;
+  --sx-text-subtle: #64748b;
+  --sx-text-disabled: #475569;
+
+  /* ── Sentrox Borders ──────────────────────────────────────────────────── */
+  --sx-border: rgba(255, 255, 255, 0.10);
+  --sx-border-hover: rgba(255, 255, 255, 0.20);
+  --sx-border-focus: rgba(37, 99, 235, 0.50);
+
+  /* ── Sentrox Glass ────────────────────────────────────────────────────── */
+  --sx-glass-light: rgba(255, 255, 255, 0.05);
+  --sx-glass-medium: rgba(255, 255, 255, 0.08);
+  --sx-glass-heavy: rgba(255, 255, 255, 0.12);
+
+  /* ── Sentrox Status ───────────────────────────────────────────────────── */
+  --sx-success: #22c55e;
+  --sx-success-bg: rgba(34, 197, 94, 0.10);
+  --sx-warning: #f59e0b;
+  --sx-warning-bg: rgba(245, 158, 11, 0.10);
+  --sx-danger: #ef4444;
+  --sx-danger-bg: rgba(239, 68, 68, 0.10);
+  --sx-info: #3b82f6;
+  --sx-info-bg: rgba(59, 130, 246, 0.10);
+
+  /* ── Sentrox Shadows ──────────────────────────────────────────────────── */
+  --sx-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --sx-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --sx-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  --sx-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  --sx-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --sx-glow-primary: 0 0 60px rgba(37, 99, 235, 0.15);
+  --sx-glow-accent: 0 0 60px rgba(6, 182, 212, 0.15);
+  --sx-glow-white: 0 0 40px rgba(255, 255, 255, 0.05);
+  --sx-shadow-button: 0 4px 14px rgba(37, 99, 235, 0.25);
+  --sx-shadow-button-hover: 0 8px 25px rgba(37, 99, 235, 0.40);
+  --sx-shadow-card: 0 4px 24px rgba(0, 0, 0, 0.2);
+  --sx-shadow-card-hover: 0 8px 40px rgba(0, 0, 0, 0.3);
+
+  /* ── Sentrox Gradients (as custom props for use in arbitrary values) ──── */
+  --sx-gradient-primary: linear-gradient(135deg, #2563eb, #06b6d4);
+  --sx-gradient-primary-reverse: linear-gradient(135deg, #06b6d4, #2563eb);
+  --sx-gradient-primary-subtle: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(6, 182, 212, 0.15));
+  --sx-gradient-text-primary: linear-gradient(to right, #60a5fa, #22d3ee);
+  --sx-gradient-text-accent: linear-gradient(to right, #06b6d4, #3b82f6);
+  --sx-gradient-text-white: linear-gradient(to bottom, #ffffff, #94a3b8);
+  --sx-gradient-radial-primary: radial-gradient(circle at center, rgba(37, 99, 235, 0.08), transparent 70%);
+  --sx-gradient-glass-highlight: linear-gradient(to bottom right, rgba(255, 255, 255, 0.10), transparent, transparent);
+  --sx-gradient-glass-top-edge: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.30), transparent);
+  --sx-gradient-section-dark: linear-gradient(to bottom, #030712, #0a0f1e, #030712);
 }
 
+/* -------------------------------------------------------------------------- */
+/*                            .dark — Overrides                               */
+/* -------------------------------------------------------------------------- */
+
 .dark {
+  /* ── Shadcn (Dark) ────────────────────────────────────────────────────── */
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -116,6 +285,10 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+
+/* -------------------------------------------------------------------------- */
+/*                              BASE LAYER                                    */
+/* -------------------------------------------------------------------------- */
 
 @layer base {
   * {

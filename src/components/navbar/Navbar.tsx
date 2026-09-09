@@ -2,14 +2,14 @@
 
 import { motion } from "framer-motion";
 
-import Container from "@/components/layout/Container";
+import Container from "@/components/ui/layout/Container";
 import { useScroll } from "@/hooks/use-scroll";
 import Aurora from "@/components/ui/aurora";
 import DesktopNav from "./DesktopNav";
 import Logo from "./Logo";
 import MobileNav from "./MobileNav";
 import NavCTA from "./NavCTA";
-import ThemeToggle from "./ThemeToggle";
+
 
 export default function Navbar() {
     const scrolled = useScroll();
@@ -38,7 +38,6 @@ export default function Navbar() {
                     <DesktopNav />
 
                     <div className="flex items-center gap-3">
-                        <ThemeToggle />
                         <NavCTA />
                         <MobileNav />
                     </div>

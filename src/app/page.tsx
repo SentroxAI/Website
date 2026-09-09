@@ -6,9 +6,9 @@ import Services from "@/components/home/Services";
 import Portfolio from "@/components/home/Portfolio";
 import Process from "@/components/home/Process";
 import Pricing from "@/components/home/Pricing";
+import Outcomes from "@/components/home/Outcomes";
 import Testimonials from "@/components/home/Testimonials";
 import FAQ from "@/components/home/FAQ";
-import CTA from "@/components/home/CTA";
 
 export default function HomePage() {
   return (
@@ -21,9 +21,9 @@ export default function HomePage() {
         <Portfolio />
         <Process />
         <Pricing />
+        <Outcomes />
         <Testimonials />
         <FAQ />
-        <CTA />
       </main>
 
       <Footer />

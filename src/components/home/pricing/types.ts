@@ -13,6 +13,8 @@ export interface PricingPlan {
     description: string;
 
     buttonText: string;
+    /** URL the CTA button should navigate to */
+    href?: string;
 
     popular?: boolean;
 
