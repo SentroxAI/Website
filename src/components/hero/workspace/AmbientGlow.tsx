@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AmbientGlow() {
     return (
-        <>
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
             <motion.div
                 animate={{
                     x: [0, 40, -20, 0],
@@ -48,6 +48,6 @@ export default function AmbientGlow() {
         blur-[150px]
       "
             />
-        </>
+        </div>
     );
 }

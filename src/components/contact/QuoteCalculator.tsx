@@ -327,7 +327,7 @@ function AddonSection({
                                 return (
                                     <div
                                         key={it.id}
-                                        className="flex items-center gap-4 py-3.5"
+                                        className="flex flex-wrap items-center gap-3 sm:gap-4 py-3.5"
                                     >
                                         <span
                                             className={cn(
@@ -351,7 +351,7 @@ function AddonSection({
                                             </div>
                                         </div>
 
-                                        <div className="flex items-center gap-4">
+                                        <div className="flex items-center gap-3 sm:gap-4 ml-auto">
                                             <span className="whitespace-nowrap text-sm font-semibold text-cyan-400">
                                                 {fmt(it.price)} {it.suffix || ""}
                                             </span>
@@ -481,7 +481,7 @@ function QuoteSummary({
                     initial={{ scale: 0.95, opacity: 0.7 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.3 }}
-                    className="mt-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text font-display text-4xl font-extrabold tracking-tight text-transparent"
+                    className="mt-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-transparent break-all"
                 >
                     {formatMoney(convertFromINR(totals.oneTime))}
                 </motion.div>

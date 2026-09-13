@@ -51,7 +51,7 @@ export default function BookingSection() {
                         padding="lg"
                         radius="3xl"
                         hover={false}
-                        className="p-10 lg:p-14"
+                        className="p-6 sm:p-10 lg:p-14"
                     >
                         <div className="grid items-center gap-12 lg:grid-cols-2">
                             {/* Left */}
@@ -61,7 +61,7 @@ export default function BookingSection() {
                                     <CalendarDays className="h-8 w-8 text-white" />
                                 </div>
 
-                                <h2 className="mt-8 text-4xl font-bold text-white">
+                                <h2 className="mt-8 text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
                                     Book a Free
                                     <br />
                                     Consultation

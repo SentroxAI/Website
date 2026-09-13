@@ -4,8 +4,6 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-
-
 import {
     Sheet,
     SheetContent,
@@ -13,7 +11,6 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet";
-
 
 import { navigation } from "./data";
 
@@ -26,23 +23,29 @@ export default function MobileNav() {
                         variant="ghost"
                         size="icon"
                         className="
-    lg:hidden
-    rounded-xl
-    border
-    border-white/10
-    bg-white/5
-    backdrop-blur-xl
-    hover:bg-white/10
-  "
+                            lg:hidden
+                            shrink-0
+                            rounded-xl
+                            border
+                            border-white/10
+                            bg-white/5
+                            backdrop-blur-xl
+                            hover:bg-white/10
+                        "
                     />
                 }
             >
                 <Menu className="size-5" />
+                <span className="sr-only">Open navigation menu</span>
             </SheetTrigger>
 
             <SheetContent
                 side="right"
-                className="w-[320px] sm:w-[360px]"
+                className="
+                    w-[85vw]
+                    max-w-[360px]
+                    overflow-y-auto
+                "
             >
                 <SheetHeader>
                     <SheetTitle>Sentrox AI</SheetTitle>
@@ -53,13 +56,20 @@ export default function MobileNav() {
                         <Link
                             key={item.href}
                             href={item.href}
-                            className="rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-muted"
+                            className="
+                                rounded-lg
+                                px-3
+                                py-3
+                                text-base
+                                font-medium
+                                transition-colors
+                                hover:bg-muted
+                            "
                         >
                             {item.title}
                         </Link>
                     ))}
                 </nav>
-
 
                 <Link
                     href="/contact"

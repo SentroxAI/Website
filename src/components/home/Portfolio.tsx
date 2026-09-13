@@ -99,20 +99,20 @@ export default function Portfolio() {
                     whileTap={hoverCard.whileTap}
                 >
                     <GlassCard className="overflow-hidden p-0">
-                        <div className="grid lg:grid-cols-2">
+                        <div className="grid lg:grid-cols-2 min-w-0">
                             {/* LEFT */}
 
-                            <div className="flex flex-col justify-between p-10">
+                            <div className="flex flex-col justify-between p-6 sm:p-10 min-w-0">
                                 <div>
                                     <span className="inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400">
                                         {selectedProject.category}
                                     </span>
 
-                                    <h3 className="mt-8 text-4xl font-bold text-white">
+                                    <h3 className="mt-8 text-2xl sm:text-3xl lg:text-4xl font-bold text-white break-words">
                                         {selectedProject.title}
                                     </h3>
 
-                                    <p className="mt-6 leading-8 text-slate-400">
+                                    <p className="mt-6 leading-8 text-slate-400 break-words">
                                         {selectedProject.description}
                                     </p>
 
@@ -143,7 +143,7 @@ export default function Portfolio() {
 
                             {/* RIGHT */}
 
-                            <div className="border-l border-white/10 p-10">
+                            <div className="border-t lg:border-t-0 lg:border-l border-white/10 p-6 sm:p-10 min-w-0">
                                 <BrowserMockup />
 
                                 {/* Metrics */}

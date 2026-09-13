@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 export default function DashboardPreview() {
     return (
-        <div className="p-6">
+        <div className="p-4 sm:p-6 min-w-0 overflow-hidden">
 
             {/* Hero */}
 
-            <div className="rounded-3xl bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 p-8">
+            <div className="rounded-3xl bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 p-5 sm:p-8">
 
                 <motion.h3
                     animate={{
@@ -18,7 +18,7 @@ export default function DashboardPreview() {
                         repeat: Infinity,
                         duration: 3,
                     }}
-                    className="text-3xl font-bold text-white"
+                    className="text-xl sm:text-3xl font-bold text-white"
                 >
                     Hotel Booking Platform
                 </motion.h3>
@@ -31,7 +31,7 @@ export default function DashboardPreview() {
 
             {/* Cards */}
 
-            <div className="mt-6 grid grid-cols-3 gap-4">
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4">
 
                 {[1, 2, 3].map((i) => (
                     <motion.div

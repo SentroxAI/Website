@@ -42,7 +42,7 @@ export default function BrowserMockup() {
 
                     </div>
 
-                    <div className="w-72 rounded-full bg-slate-800 py-2 text-center text-xs text-slate-400">
+                    <div className="flex-1 max-w-72 rounded-full bg-slate-800 py-2 text-center text-xs text-slate-400 truncate px-3">
                         https://sentrox.ai
                     </div>
 
